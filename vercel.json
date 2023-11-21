@@ -1,12 +1,10 @@
 {
     "builds": [
-      { "src": "/server/app.py", "use": "@now/python" }
+      { "src": "/server/app.py", "use": "@vercel/python", "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }} 
+      
     ],
     "routes": [
       { "src": "/(.*)", "dest": "server/app.py" }
-    ],
-    "env": {
-      "PYTHON_VERSION": "3.9"
-    }
+    ]
   }
   
