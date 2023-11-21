@@ -1,5 +1,6 @@
 import requests
 import json
+from fastapi import FastAPI
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 app = FastAPI()
